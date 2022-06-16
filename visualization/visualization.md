@@ -1,7 +1,7 @@
 Options visualization
 =====================
 
-Learned options are not always easily interpretable by humans. We did find some options in the following environments to have clear roles, that we try to show through this visualization.
+Learned options are not always easily interpretable by humans. We did find that some options in the following environments seem to have clear roles.
 
 ## Montezuma's Revenge
 
