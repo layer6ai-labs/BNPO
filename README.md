@@ -1,3 +1,7 @@
+<p align="center">
+<a href="https://layer6.ai/"><img src="https://github.com/layer6ai-labs/DropoutNet/blob/master/logs/logobox.jpg" width="180"></a>
+</p>
+
 Bayesian Nonparametrics for Offline Skill Discovery 
 ===================================================
 
@@ -88,9 +92,9 @@ Run the RL training.
 python run_atari_exp.py --pretrained-path runs/atari_pretraining_fixed_alien --env-name AlienNoFrameskip-v4 --save-dir runs/atari_augmented_fixed_alien --training-steps 3000000
 ```
 
-## Run the compile baseline
+## Run the CompILE baseline
 
-The compile baseline code can be found [here](https://github.com/UnrealLink/compile).
+The CompILE baseline code can be found [here](https://github.com/UnrealLink/compile).
 
 ```
 git clone git@github.com:UnrealLink/compile.git ../compile
@@ -112,9 +116,9 @@ cd ../BNPO
 python run_atari_exp.py --demo-file ../trajectories/alien/trajectories.npy --pretrained-path runs/atari_pretraining_compile_alien --env-name AlienNoFrameskip-v4 --save-dir ../compile/runs/atari_augmented_compile_alien --training-steps 3000000 --baseline-compile
 ```
 
-## Run the nonparametric compile baseline
+## Run the nonparametric CompILE baseline
 
-The nonparametric version of compile can be found on the [compile_np] branch of the compile repository.
+The nonparametric version of CompILE can be found on the [compile_np] branch of the CompILE repository.
 
 To run the pretraining:
 
@@ -133,9 +137,9 @@ cd ../BNPO
 python run_atari_exp.py --pretrained-path runs/atari_pretraining_compilenp_alien --env-name AlienNoFrameskip-v4 --save-dir ../compile/runs/atari_augmented_compilenp_alien --training-steps 3000000 --baseline-compile-np
 ```
 
-## Run the ddo baseline
+## Run the DDO baseline
 
-The ddo baseline code can be found [here](https://github.com/UnrealLink/segment-centroid).
+The DDO baseline code can be found [here](https://github.com/UnrealLink/segment-centroid).
 
 ```
 git clone git@github.com:UnrealLink/segment-centroid.git ../segment-centroid
@@ -151,7 +155,7 @@ conda install pytorch cudatoolkit=10.2 -c pytorch
 cd ../BNPO
 ```
 
-To run the pretraining, use the [ddo_compat]() branch of the repo:
+To run the pretraining, use the [ddo_compat]() branch of this repository:
 
 ```
 git checkout ddo_compat
@@ -160,7 +164,7 @@ conda activate ddo_baseline
 python train.py --env atari --demo-file ../trajectories/alien/trajectories.npy --max-epochs 10000 --K 7 --baseline-ddo --save-dir runs/atari_pretraining_ddo_alien
 ```
 
-The stable-baselines3 repository is not compatible with the ddo-baseline repository, so we use a custom pytorch version of ddo to load the trained model to create the augmented environment. 
+The stable-baselines3 repository is not compatible with the DDO baseline repository, so we use a custom pytorch version of DDO to load the trained model to create the augmented environment. 
 
 ```
 git clone git@github.com:UnrealLink/ddo_baseline_pytorch.git ../ddo_baseline_pytorch
@@ -170,7 +174,18 @@ pip install scipy sklearn
 
 You can then launch the RL training.
 
-
 ```
 python run_atari_exp.py --pretrained-path runs/atari_pretraining_ddo_alien --env-name AlienNoFrameskip-v4 --save-dir runs/atari_augmented_compile_alien --training-steps 3000000 --baseline-ddo
+```
+
+# Bibtex
+
+```
+@article{
+  title = {Bayesian Nonparametrics for Offline Skill Discovery},
+  author = {Villecroze, Valentin and Braviner, Harry J. and Naderian, Panteha and Maddison, Chris J. and Loaiza-Ganem, Gabriel},
+  year = {2022},
+  url = {https://arxiv.org/abs/2202.04675},
+}
+
 ```
