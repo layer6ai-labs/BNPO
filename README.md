@@ -181,11 +181,13 @@ python run_atari_exp.py --pretrained-path runs/atari_pretraining_ddo_alien --env
 # Bibtex
 
 ```
-@article{
-  title = {Bayesian Nonparametrics for Offline Skill Discovery},
-  author = {Villecroze, Valentin and Braviner, Harry J. and Naderian, Panteha and Maddison, Chris J. and Loaiza-Ganem, Gabriel},
-  year = {2022},
-  url = {https://arxiv.org/abs/2202.04675},
+@inproceedings{villecroze2022bayesian,
+  title={Bayesian nonparametrics for offline skill discovery},
+  author={Villecroze, Valentin and Braviner, Harry and Naderian, Panteha and Maddison, Chris and Loaiza-Ganem, Gabriel},
+  booktitle={International Conference on Machine Learning},
+  pages={22284--22299},
+  year={2022},
+  organization={PMLR}
 }
 
 ```
